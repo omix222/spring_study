@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>calc input</title>
+</head>
+<body>
+	    <form method="POST" action="/calcoutput" th:action="@{/calcoutput}">
+        <input type="text" name="txt1" th:value="${txt1}" />
+        <p>+</p>
+        <input type="text" name="txt2" th:value="${txt2}" />
+        <input type="submit" value="submit" />
+</form>
+</body>
+</html>

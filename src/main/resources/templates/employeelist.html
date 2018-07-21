@@ -1,0 +1,18 @@
+<html>
+<head><title>employee list</title></head>
+<body>
+	<h2>Employee List</h2>
+	<table>
+		<thead><tr>
+				<td>ID</td>
+				<td>Name</td>
+				<td>Department Name</td>
+		</tr></thead>
+		<tbody th:each="employee : ${employeelist}"><tr>
+				<td th:text="${employee.id}">dummy ID</td>
+				<td th:text="${employee.name}">dummy Name</td>
+				<td th:text="${employee.departmentName}">dummy DepartmentName</td>
+		</tr></tbody>
+	</table>
+</body>
+</html>
