@@ -1,8 +1,18 @@
 package com.example.springstudy;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="T_EMPLOYEE")
 public class Employee {
+	@Id
 	private String id;
+	@Column
 	private String name;
+	@Column
 	private String departmentName;
 	public Employee(String id, String name, String departmentName) {
 		super();
@@ -10,6 +20,11 @@ public class Employee {
 		this.name = name;
 		this.departmentName = departmentName;
 	}
+	
+	public Employee() {
+		super();
+	}
+
 	public String getId() {
 		return id;
 	}

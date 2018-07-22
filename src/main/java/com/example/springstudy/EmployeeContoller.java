@@ -11,7 +11,8 @@ public class EmployeeContoller {
 	EmployeeService employeeService;
 	@RequestMapping("/employeelist")
 	public String getEmployeelist(Model model) {
-		List<Employee> resultList = employeeService.getEmployeelist();
+		//List<Employee> resultList = employeeService.getEmployeelist();
+		List<Employee> resultList = employeeService.getEmployeelistUsingRepository();
 		model.addAttribute("employeelist", resultList);
 		return "employeelist";
 	}
